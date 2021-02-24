@@ -4,3 +4,6 @@
 [submodule "TestingPlugin"]
 	path = TestingPlugin
 	url = git@github.com:XPerianer/TestingPlugin.git
+[submodule "TestingBackend"]
+	path = TestingBackend
+	url = git@github.com:XPerianer/TestingBackend.git
