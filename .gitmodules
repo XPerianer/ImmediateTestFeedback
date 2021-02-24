@@ -1,3 +1,6 @@
 [submodule "pytest-immediate"]
 	path = pytest-immediate
 	url = git@github.com:XPerianer/pytest-immediate.git
+[submodule "TestingPlugin"]
+	path = TestingPlugin
+	url = git@github.com:XPerianer/TestingPlugin.git
