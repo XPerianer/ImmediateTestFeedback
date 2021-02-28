@@ -5,7 +5,7 @@
 This repo serves as the starting point for installing and
 tweaking the `ImmediateTestFeedback` Prototype build inside
 the PLCTE seminar at the software architecture chair of the Hasso-Plattner-Institute.
-[This screencast demonstrates the functionality](https://vimeo.com/512282859/04ed6920bd)
+[This screencast demonstrates the functionality.](https://vimeo.com/512282859/04ed6920bd)
 
 # Introduction
 Changing software without correctly understanding it often leads to confusion, as developers do not understand how the change corresponds to the new observed behaviour of the system.
