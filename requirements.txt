@@ -1,4 +1,6 @@
-joblib>=1.0.1
+editdistance>=0.5.3
 jupyter>=1.0.0
 matplotlib>=3.3.4
 pandas>=1.2.2
+sklearn>=0.0
+joblib>=1.0.1
