@@ -24,7 +24,8 @@ The prototype system consists of several parts:
 
 ## Installation Steps
 1.  Clone the repository you want to get immediate test feedback during development.
-    Examplatory, we will use flask. The version is pinned to make sure that all test run through with this concrete setup. TODO elaborate
+    Examplatory, we will use flask.
+    (The version is pinned to make sure that all test run through with this concrete setup. Unfortunatley, currently flask uses dependencies for its tests on the master branches of other repos like Werkzeug. This makes the setup really flaky.)
     ```
     git clone https://github.com/pallets/flask.git
     git checkout e0d7d402
