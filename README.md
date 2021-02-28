@@ -1,5 +1,8 @@
 # ImmediateTestFeedback
 
+![Dark Mode Screenshot](https://user-images.githubusercontent.com/5360508/109427413-9a238e00-79f2-11eb-952e-d013427b19eb.png)
+
+
 This repo serves as the starting point for installing and
 tweaking the `ImmediateTestFeedback` Prototype build inside
 the PLCTE seminar at the software architecture chair of the Hasso-Plattner-Institute.
