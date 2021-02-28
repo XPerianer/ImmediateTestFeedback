@@ -19,21 +19,35 @@ The prototype system consists of several parts:
 * [TestingBackend](https://github.com/XPerianer/TestingBackend) - The backend that provides the plugin with the necessary information.
 * [pytest-immediate](https://github.com/XPerianer/pytest-immediate/) - The plugin for pytest that enables immediate response times for failing tests and test reordering
 
-## Datasets
-The relevancy data, as well as the prediction model for predicting failing tests can be customized for the use case.
-For the installation steps, we will use the standard data which is already included in the TestingBackend repo. TODO: Link to how to generate custom data
-
-
 ## Installation Steps
 1.  Clone the repository you want to get immediate test feedback during development.
-    Examplatory, we will use flask
+    Examplatory, we will use flask. The version is pinned to make sure that all test run through with this concrete setup. TODO elaborate
     ```
     git clone https://github.com/pallets/flask.git
+    git checkout e0d7d402
     ```
+    The required datasets for the flask repository are already present in the TestingBackend repository, which simplifies the setup. See [Using Custom Data](https://github.com/XPerianer/ImmediateTestFeedback#Using-Custom-Data) for more information.
+1.  Create a virtual environment that can run the test using `pytest`
+    Example for flask:
+    ```
+    cd flask
+    python -m venv venv
+    . venv/bin/activate
+    pip install -e . -r requirements/dev.txt 
+    ```
+    A run of pytest should now complete without errors.
 1. Clone this repository including all submodules.
     ```
     git clone --recurse-submodules https://github.com/XPerianer/ImmediateTestFeedback
     ```
+1.  Install `pytest-immediate` into the flask virtual environment.
+    ```
+    cd flask
+    . venv/bin/activate
+    cd ../pytest-immediate
+    pip install . -r requirements.txt
+    ```
+    If you now call pytest in the flask folder, it should mention `immediate` under plugins.
 1.  Install and start the Backend:
     ```
     cd TestingBackend
@@ -45,7 +59,12 @@ For the installation steps, we will use the standard data which is already inclu
     ```
     and follow the instructions [in the TestingPlugin repository](https://github.com/XPerianer/TestingPlugin)
 
-## Using Custom Datasets
+## Datasets
+The relevancy data, as well as the prediction model for predicting failing tests can be customized to other repositories.
+
+For the installation steps, we used the standard data which is already included in the TestingBackend repo.
+
+## Using Custom Data
 There are two different datasets needed for the prototype:
 *   The mutation testing dataset
 *   The Prediction Model
